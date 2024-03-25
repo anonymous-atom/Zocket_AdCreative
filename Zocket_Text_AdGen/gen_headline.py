@@ -6,11 +6,19 @@ app = Flask(__name__)
 api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 
-# Import prompt from text file
-with open('few_shot_headline_prompt.txt', 'r') as file:
+
+# Get the absolute path of the directory of the current script
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+# Construct the absolute path of the text files
+heading_prompt_file_path = os.path.join(dir_path, 'few_shot_headline_prompt.txt')
+subheading_prompt_file_path = os.path.join(dir_path, 'few_shot_subheading_prompt.txt')
+
+# Now you can open your files using the absolute paths
+with open(heading_prompt_file_path, 'r') as file:
     heading_prompt = file.read()
 
-with open('few_shot_subheading_prompt.txt', 'r') as file:
+with open(subheading_prompt_file_path, 'r') as file:
     subheading_prompt = file.read()
 
 
