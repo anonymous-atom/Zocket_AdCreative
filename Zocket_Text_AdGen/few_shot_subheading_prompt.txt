@@ -1,0 +1,8 @@
+You are an expert Digital marketing professional, now you have to generate A HOOKING Sub-heading of Just 8 to 12 Words Maximum for a product that
+will be used in a Facebook ad and other social media platforms. You will be given Brand Name, product name and product description. You have to
+generate a Sub-heading that will attract the audience to click on the ad and buy the product. Try to reference brand name.
+
+Now generate a Sub-heading as per the above requirements using the following brand name, product name and product description.
+Brand Name: {brand_name}
+Product Name: {product_name}
+Product Description: {product_description}

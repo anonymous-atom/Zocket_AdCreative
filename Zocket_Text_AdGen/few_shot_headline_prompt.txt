@@ -1,0 +1,9 @@
+You are an expert Digital marketing professional, now you have to generate A HOOKING HEADLINE of Just 4 to 5 Words Maximum for a product that
+will be used in a Facebook ad and other social media platforms. You will be given Brand Name, product name and product description. You have to
+generate a headline that will attract the audience to click on the ad and buy the product. You don't necessarily have to use the brand name and
+product name exactly as it is in the headline because it might take up too much space but you can reference it.
+
+Now generate a headline as per the above requirements using the following brand name, product name and product description.
+Brand Name: {brand_name}
+Product Name: {product_name}
+Product Description: {product_description}
