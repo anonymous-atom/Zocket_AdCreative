@@ -4,6 +4,7 @@ generate a Sub-heading that will attract the audience to click on the ad and buy
 
 DO NOT USE "-" AND ":" Until and unless used in product name or brand name.
 Please refrain from using hyphens and colons unless they are part of a product name or brand name.
+Also don't use words that use "-" or ":" as a part of the word. For example, "high-performance" is not allowed as it uses "-".
 
 Example 1:
 

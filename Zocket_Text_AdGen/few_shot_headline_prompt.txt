@@ -17,9 +17,6 @@ Input:
 Output:
 Elevate Your Sneaker Game!
 
-
-
-
 Now generate a headline as per the above requirements using the following brand name, product name and product description.
 Brand Name: {brand_name}
 Product Name: {product_name}
