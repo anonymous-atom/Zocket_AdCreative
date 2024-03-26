@@ -6,10 +6,6 @@ product name exactly as it is in the headline because it might take up too much 
 DO NOT USE "-" AND ":" IN THE HEADLINE.
 Please refrain from using hyphens and colons unless they are part of a product name or brand name.
 
-Now generate a headline as per the above requirements using the following brand name, product name and product description.
-Brand Name: {brand_name}
-Product Name: {product_name}
-Product Description: {product_description}
 
 Example 1:
 
@@ -23,12 +19,8 @@ Elevate Your Sneaker Game!
 
 
 
-Example 2:
 
-Input:
-"brand_name": "H&M",
-"product_name": "Gathered-sleeve blazer",
-"product_description": "Fitted blazer in woven fabric made from a LivaEco™ viscose blend. Notch lapels, gathered, 3/4-length sleeves with shoulder pads, and flap front pockets. No fasteners. Lined."
-
-Output:
-Upgrade Your Blazer Collection
+Now generate a headline as per the above requirements using the following brand name, product name and product description.
+Brand Name: {brand_name}
+Product Name: {product_name}
+Product Description: {product_description}
