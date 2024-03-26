@@ -1,11 +1,11 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, HTTPException, Request, status
+from pydantic import BaseModel
 import os
-from openai import OpenAI
+from openai import OpenAI, Client
 
-app = Flask(__name__)
-api_key = os.getenv('OPENAI_API_KEY')
+app = FastAPI()
+api_key = os.environ.get('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
-
 
 # Get the absolute path of the directory of the current script
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -22,13 +22,18 @@ with open(subheading_prompt_file_path, 'r') as file:
     subheading_prompt = file.read()
 
 
-@app.route('/generate', methods=['POST'])
-def generate_headline_subheading():
-    data = request.get_json()
+class GenerateRequest(BaseModel):
+    brand_name: str
+    product_name: str
+    product_description: str
 
-    brand_name = data.get('brand_name')
-    product_name = data.get('product_name')
-    product_description = data.get('product_description')
+
+@app.post('/generate')
+async def generate_headline_subheading(data: GenerateRequest):
+    brand_name = data.brand_name
+    product_name = data.product_name
+    product_description = data.product_description
+
     heading_prompt_tuple = (heading_prompt, True)
     subheading_prompt_tuple = (subheading_prompt, True)
 
@@ -80,8 +85,4 @@ def generate_headline_subheading():
 
     subhead = completion.choices[0].message.content if completion else None
 
-    return jsonify({'headline': head, 'subheading': subhead})
-
-
-if __name__ == '__main__':
-    app.run(debug=False)
+    return {'headline': head, 'subheading': subhead}
