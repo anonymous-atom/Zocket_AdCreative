@@ -3,7 +3,31 @@ will be used in a Facebook ad and other social media platforms. You will be give
 generate a headline that will attract the audience to click on the ad and buy the product. You don't necessarily have to use the brand name and
 product name exactly as it is in the headline because it might take up too much space but you can reference it.
 
+DO NOT USE "-" AND ":" IN THE HEADLINE.
+
 Now generate a headline as per the above requirements using the following brand name, product name and product description.
 Brand Name: {brand_name}
 Product Name: {product_name}
 Product Description: {product_description}
+
+Example 1:
+
+Input:
+"brand_name": "Elevar",
+"product_name": "Elevar ARC Racer",
+"product_description": "A high-performance shoe engineered specifically to adapt to your needs, wherever your day takes you. unmatched comfort and world class protection and versatile and premium enough to sport on a night out. "
+
+Output:
+Elevate Your Sneaker Game!
+
+
+
+Example 2:
+
+Input:
+"brand_name": "H&M",
+"product_name": "Gathered-sleeve blazer",
+"product_description": "Fitted blazer in woven fabric made from a LivaEco™ viscose blend. Notch lapels, gathered, 3/4-length sleeves with shoulder pads, and flap front pockets. No fasteners. Lined."
+
+Output:
+Upgrade Your Blazer Collection
