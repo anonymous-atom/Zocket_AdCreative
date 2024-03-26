@@ -4,7 +4,7 @@ import os
 from openai import OpenAI, Client
 
 app = FastAPI()
-api_key = os.environ.get('OPENAI_API_KEY')
+api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 
 # Get the absolute path of the directory of the current script
@@ -55,14 +55,13 @@ async def generate_headline_subheading(data: GenerateRequest):
     # Generate the headline using GPT-3
     if heading_prompt_tuple[1]:
         completion = client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model="gpt-3.5-turbo-0125",
             messages=[
                 {"role": "system",
                  "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING 
                  HEADLINE of Just 4 to 5 Words Maximum for a product that will be used in a Facebook ad and other 
                  social media platforms. It should be a single continuous sentence, DO NOT USE "-" AND ":" IN THE 
-                 HEADLINE.Please refrain from using hyphens and colons unless they are part of a product name or 
-                 brand name."""
+                 HEADLINE.Please refrain from using hyphens and colons."""
                  },
 
                 {"role": "user", "content": h_prompt}
@@ -74,15 +73,15 @@ async def generate_headline_subheading(data: GenerateRequest):
 
     if subheading_prompt_tuple[1]:
         completion = client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model="gpt-3.5-turbo-0125",
             messages=[
                 {"role": "system",
                  "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING 
                  SUB-HEADLINE of Just 10 to 15 Words Maximum for a product that will be used in a Facebook ad and 
                  other social media platforms. DO NOT USE "-" AND ":" Until and unless used in product name or brand 
-                 name. Please refrain from using hyphens and colons unless they are part of a product name or brand 
-                 name. Also don't use words that use "-" or ":" as a part of the word. For example, 
-                 "high-performance" is not allowed as it uses "-". """
+                 name. Please refrain from using hyphens and colons , they can be only used for words provided in
+                 product name and brand name. Also don't use words that use "-" or ":" as a part of the word.
+                  For example,"high-performance" is not allowed as it uses "-". """
                  },
 
                 {"role": "user", "content": sub_prompt}
