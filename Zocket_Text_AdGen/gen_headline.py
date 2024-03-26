@@ -58,9 +58,11 @@ async def generate_headline_subheading(data: GenerateRequest):
             model="gpt-4-turbo-preview",
             messages=[
                 {"role": "system",
-                 "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING HEADLINE
-                 of Just 4 to 5 Words Maximum for a product that will be used in a Facebook ad and other social media platforms.
-                 It should be a single continuous sentence, don't use ":" """
+                 "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING 
+                 HEADLINE of Just 4 to 5 Words Maximum for a product that will be used in a Facebook ad and other 
+                 social media platforms. It should be a single continuous sentence, DO NOT USE "-" AND ":" IN THE 
+                 HEADLINE.Please refrain from using hyphens and colons unless they are part of a product name or 
+                 brand name."""
                  },
 
                 {"role": "user", "content": h_prompt}
@@ -75,8 +77,12 @@ async def generate_headline_subheading(data: GenerateRequest):
             model="gpt-4-turbo-preview",
             messages=[
                 {"role": "system",
-                 "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING SUB-HEADLINE
-                 of Just 10 to 15 Words Maximum for a product that will be used in a Facebook ad and other social media platforms.  """
+                 "content": """You are an expert Digital marketing professional, now you have to generate A HOOKING 
+                 SUB-HEADLINE of Just 10 to 15 Words Maximum for a product that will be used in a Facebook ad and 
+                 other social media platforms. DO NOT USE "-" AND ":" Until and unless used in product name or brand 
+                 name. Please refrain from using hyphens and colons unless they are part of a product name or brand 
+                 name. Also don't use words that use "-" or ":" as a part of the word. For example, 
+                 "high-performance" is not allowed as it uses "-". """
                  },
 
                 {"role": "user", "content": sub_prompt}
