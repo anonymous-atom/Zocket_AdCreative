@@ -3,6 +3,7 @@ will be used in a Facebook ad and other social media platforms. You will be give
 generate a Sub-heading that will attract the audience to click on the ad and buy the product. Try to reference brand name.
 
 DO NOT USE "-" AND ":" Until and unless used in product name or brand name.
+Please refrain from using hyphens and colons unless they are part of a product name or brand name.
 
 Now generate a Sub-heading as per the above requirements using the following brand name, product name and product description.
 Brand Name: {brand_name}
@@ -18,15 +19,3 @@ Input:
 
 Output:
 Experience unrivaled comfort and performance with Elevar ARC Racer.
-
-
-
-Example 2:
-
-Input:
-"brand_name": "H&M",
-"product_name": "Gathered-sleeve blazer",
-"product_description": "Fitted blazer in woven fabric made from a LivaEco™ viscose blend. Notch lapels, gathered, 3/4-length sleeves with shoulder pads, and flap front pockets. No fasteners. Lined."
-
-Output:
-Elevate your look with this chic gathered-sleeve blazer.

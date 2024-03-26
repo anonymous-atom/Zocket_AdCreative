@@ -4,6 +4,7 @@ generate a headline that will attract the audience to click on the ad and buy th
 product name exactly as it is in the headline because it might take up too much space but you can reference it.
 
 DO NOT USE "-" AND ":" IN THE HEADLINE.
+Please refrain from using hyphens and colons unless they are part of a product name or brand name.
 
 Now generate a headline as per the above requirements using the following brand name, product name and product description.
 Brand Name: {brand_name}
